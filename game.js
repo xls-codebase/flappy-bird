@@ -1,4 +1,4 @@
-import {collisionDetection} from "/utils/utils.js";
+import {collisionDetection} from "https://xls-codebase.github.io/flappy-bird/utils/utils.js";
 
 
 let hole = document.getElementById("hole");
