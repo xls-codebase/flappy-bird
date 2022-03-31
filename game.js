@@ -16,13 +16,13 @@ let gravityStopped = false;
 let gameStopped = false;
 
 function soundHole() {
-    (new Audio('/sounds/hole.wav')).play();
+    (new Audio('./sounds/hole.wav')).play();
 }
 function sound() {
-    (new Audio('/sounds/fly.wav')).play();
+    (new Audio('./sounds/fly.wav')).play();
 }
 function soundGameOver() {
-    (new Audio('/sounds/gameover.wav')).play()
+    (new Audio('./sounds/gameover.wav')).play()
 }
 
 function positionHoleRandomly() {
