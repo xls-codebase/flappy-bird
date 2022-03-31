@@ -1,5 +1,4 @@
 export function collisionDetection(element1, element2, extra) {
-    console.log ('collission mission')
     extra = extra || {
         y1: 0,
         y2: 0
