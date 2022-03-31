@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'pressStart';
+    src: url('/font/PressStart2P-Regular.ttf')
+}
+
+h1 {
+    font-family: 'pressStart';
+    font-size: 30px;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#game{
+    background: url("images/Background.jpg");
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#pipe{
+    background: linear-gradient(90deg, rgba(0,166,0,1) 0%, rgba(126,207,16,1) 50%, rgba(0,166,0,1) 100%);
+    height: 100vh;
+    width: 45px;
+    position: relative;
+    animation: pipe-movement 4s linear infinite;
+}
+
+#bird{
+    background: url("images/Bird.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    top: 20vh;
+    left: 20vw;
+}
+
+#hole{
+    background: url("images/Hole.jpg") no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -600px;
+    height: 188px;
+    width: 45px;
+    animation: pipe-movement 4s linear infinite;
+}
+
+.go-down {
+    animation: rotateDown 0.2s;
+    animation-fill-mode:forwards;
+}
+
+#game-over {
+    display: none;
+    left: 0;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+    position: absolute;
+}
+
+#score {
+    font-family: 'pressStart';
+    color: white;
+    left: 0;
+    text-align: left;
+    top: 0%;
+    width: 100%;
+    position: absolute;
+}
+
+#button {
+    background-color: aliceblue;
+    font-family: pressStart;
+    border-color: green;
+}
+
+
+@keyframes rotateDown {
+    0% { transform: rotate( 0deg ) }
+    100% { transform: rotate( 35deg ) }
+}
+
+@keyframes rotateUp {
+    0% { transform: rotate( 0deg ) }
+    100% { transform: rotate( -35deg ) }
+}
+
+@keyframes pipe-movement {
+    0% {left: 100vw;}
+    100% {left: -50px;}
+}
+
+@keyframes hole-movement {
+    0% {left: 100vw;}
+    100% {left: -50px;}
+}
